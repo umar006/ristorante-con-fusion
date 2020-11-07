@@ -28,7 +28,8 @@
                <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span>
                      About</a></li>
                <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
-               <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span>
+               <li class="nav-item"><a class="nav-link" href="./contactus.html"><span
+                        class="fa fa-address-card fa-lg"></span>
                      Contact</a></li>
             </ul>
          </div>
@@ -44,8 +45,13 @@
                   lipsmacking creations will tickle your culinary senses!</p>
             </div>
             <div class="col-12 col-sm-6">
-               <div class="col-12 col-sm align-self-center">
-                  <img src="img/logo.png" alt="logo" class="img-fluid">
+               <div class="row align-items-center">
+                  <div class="col-12 col-sm-6">
+                     <img src="img/logo.png" alt="logo" class="img-fluid">
+                  </div>
+                  <div class="col-12 col-sm-6">
+                     <a class="btn btn-warning" href="#reservercard">Reserve Table</a>
+                  </div>
                </div>
             </div>
          </div>
@@ -66,7 +72,8 @@
                      <span class="badge badge-danger">HOT</span>
                      <span class="badge badge-pill badge-secondary">$4.99</span>
                   </h2>
-                  <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives,
+                  <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and Italian pizza,
+                     topped with Cerignola olives,
                      ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
                </div>
             </div>
@@ -78,10 +85,20 @@
             <h3>This Month's Promotions</h3>
          </div>
          <div class="col-sm col-md">
-            <h2>Weekend Grand Buffet</h2>
-            <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers,
-               six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just
-               $19.99 per person </p>
+            <div class="media">
+               <div class="media-body">
+                  <h2 class="mt-0">
+                     Weekend Grand Buffet
+                     <span class="badge badge-danger">NEW</span>
+                  </h2>
+                  <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different
+                     salads, six enticing
+                     appetizers,
+                     six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just
+                     $19.99 per person </p>
+               </div>
+               <img src="img/buffet.png" alt="buffet" class="d-flex mr-3 img-thumbnail align-self-center">
+            </div>
          </div>
       </div>
       <hr>
@@ -95,13 +112,70 @@
                <div class="media-body">
                   <h2 class="mt-0">Alberto Somayya</h2>
                   <h4>Executive Chef</h4>
-                  <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with
+                  <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience
+                     having worked closely with
                      whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion
                      experiences. </p>
                </div>
             </div>
          </div>
       </div>
+      <hr>
+      <div class="row">
+         <div class="col-8 mx-auto mb-3">
+            <div id="reservercard" class="card">
+               <h3 class="card-header bg-warning text-white"><strong>Reserve a Table</strong></h3>
+               <div class="card-body">
+                  <form>
+                     <div class="form-group row">
+                        <label for="nguest" class="col-sm-3 col-form-label">Number of Guests</label>
+                        <div class="col-sm-9">
+                           <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="reservenumber" id="reserve1">
+                              <label class="form-check-label" for="reserve1">1</label>
+                           </div>
+                           <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="reservenumber" id="reserve2">
+                              <label class="form-check-label" for="reserve2">2</label>
+                           </div>
+                           <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="reservenumber" id="reserve3">
+                              <label class="form-check-label" for="reserve3">3</label>
+                           </div>
+                           <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="reservenumber" id="reserve4">
+                              <label class="form-check-label" for="reserve4">4</label>
+                           </div>
+                           <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="reservenumber" id="reserve5">
+                              <label class="form-check-label" for="reserve5">5</label>
+                           </div>
+                           <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="reservenumber" id="reserve6">
+                              <label class="form-check-label" for="reserve6">6</label>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="form-group row">
+                        <label class="col-sm-3 col-form-label" for="datetime">Date and Time</label>
+                        <div class="col col-sm-5">
+                           <input class="form-control" type="date" name="reservedate" id="reservedate">
+                        </div>
+                        <div class="col col-sm-4">
+                           <input class="form-control" type="time" name="reservetime" id="reservetime">
+                        </div>
+                     </div>
+                     <div class="form-group row">
+                        <div class="offset-sm-3">
+                           <button class="btn btn-primary" type="submit">Reserve</button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
    </div>
 
    <footer class="footer">
