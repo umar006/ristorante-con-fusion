@@ -41,6 +41,7 @@
       </div>
    </nav>
 
+   <!-- Login Modal -->
    <div id="loginModal" class="modal fade" role="dialog">
       <div class="modal-dialog modal-lg" role="content">
          <div class="modal-content">
@@ -71,7 +72,6 @@
                   <div class="form-row">
                      <button class="btn btn-secondary btn-sm ml-auto" type="button" data-dismiss="modal">Cancel</button>
                      <button class="btn btn-primary btn-sm ml-1" type="submit" data-dismiss="modal">Sign in</button>
-
                   </div>
                </form>
             </div>
@@ -93,9 +93,8 @@
                      <img src="img/logo.png" alt="logo" class="img-fluid">
                   </div>
                   <div class="col-12 col-sm-6">
-                     <a class="btn btn-block nav-link btn-warning" href="#reservercard" role="button"
-                        data-toggle="tooltip" data-html="true" title="Or Call us at <br><strong>+852 12345678</strong>"
-                        data-placement="bottom">Reserve Table</a>
+                     <a class="btn btn-block nav-link btn-warning" role="button" data-toggle="modal"
+                        data-target="#reserveModal">Reserve Table</a>
                   </div>
                </div>
             </div>
@@ -103,13 +102,86 @@
       </div>
    </header>
 
+   <!-- Reserver Table Modal -->
+   <div id="reserveModal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg" role="content">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h4 class="modal-title">Reserve a Table</h4>
+               <button class="close" type="button" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+               <form>
+                  <div class="form-group row align-items-center">
+                     <label for="nguest" class="col-sm-3 col-form-label">Number of Guests</label>
+                     <div class="col-sm-9">
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="reservenumber" id="reserve1">
+                           <label class="form-check-label" for="reserve1">1</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="reservenumber" id="reserve2">
+                           <label class="form-check-label" for="reserve2">2</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="reservenumber" id="reserve3">
+                           <label class="form-check-label" for="reserve3">3</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="reservenumber" id="reserve4">
+                           <label class="form-check-label" for="reserve4">4</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="reservenumber" id="reserve5">
+                           <label class="form-check-label" for="reserve5">5</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="reservenumber" id="reserve6">
+                           <label class="form-check-label" for="reserve6">6</label>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="form-group row align-items-center">
+                     <label class="col-sm-3 col-form-label">Section</label>
+                     <div class="col-sm-9">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                           <label class="btn btn-success active">
+                              <input id="nonsmoking" type="radio" name="section" checked>Non-Smoking
+                           </label>
+                           <label class="btn btn-danger">
+                              <input id="smoking" type="radio" name="section">Smoking
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="form-group row align-items-center">
+                     <label class="col-sm-3 col-form-label" for="datetime">Date and Time</label>
+                     <div class="col col-sm-5">
+                        <input class="form-control" type="date" name="reservedate" id="reservedate">
+                     </div>
+                     <div class="col col-sm-4">
+                        <input class="form-control" type="time" name="reservetime" id="reservetime">
+                     </div>
+                  </div>
+                  <div class="form-group row align-items-center">
+                     <div class="offset-sm-3">
+                        <button class="btn btn-secondary ml-3">Cancel</button>
+                        <button class="btn btn-primary" type="submit">Reserve</button>
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+
    <div class="container">
       <div class="row row-content">
          <div class="col">
             <div id="mycarousel" class="carousel slide" data-ride="carousel">
                <div class="carousel-inner" role="listbox">
                   <div class="carousel-item active">
-                     <img src="img/uthappizza.png" alt="uthappizza" class="d-flex mr-3 img-thumbnail align-self-center">
+                     <img src="img/uthappizza.png" alt="uthappizza" class="d-flex mr-3  align-self-center">
                      <div class="carousel-caption d-none d-md-block">
                         <h2 class="mt-0">
                            Uthappizza
@@ -123,7 +195,7 @@
                      </div>
                   </div>
                   <div class="carousel-item">
-                     <img src="img/buffet.png" alt="buffet" class="d-flex mr-3 img-thumbnail align-self-center">
+                     <img src="img/buffet.png" alt="buffet" class="d-flex mr-3  align-self-center">
                      <div class="carousel-caption d-none d-md-block">
                         <h2 class="mt-0">
                            Weekend Grand Buffet
@@ -139,7 +211,7 @@
                      </div>
                   </div>
                   <div class="carousel-item">
-                     <img src="img/alberto.png" alt="Alberto" class="d-flex mr-3 img-thumbnail align-self-center">
+                     <img src="img/alberto.png" alt="Alberto" class="d-flex mr-3  align-self-center">
                      <div class="carousel-caption d-none d-md-block">
                         <h2 class="mt-0">Alberto Somayya</h2>
                         <h4>Executive Chef</h4>
@@ -335,11 +407,6 @@
    <script src="node_modules/jquery/dist/jquery.min.js"></script>
    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-   <script>
-      $(document).ready(function () {
-         $('[data-toggle="tooltip"]').tooltip();
-      });
-   </script>
 </body>
 
 </html>
