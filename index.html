@@ -228,13 +228,21 @@
                      <li data-target="#mycarousel" data-slide-to="2"></li>
                   </ol>
                </div>
+               <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+               </a>
+               <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+               </a>
+               <div id="carousel-button" class="btn-group">
+                  <button id="carousel-pause" class="btn btn-danger btn-sm">
+                     <span class="fa fa-pause"></span>
+                  </button>
+                  <button id="carousel-play" class="btn btn-danger btn-sm">
+                     <span class="fa fa-play"></span>
+                  </button>
+               </div>
             </div>
-            <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
-               <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
-               <span class="carousel-control-next-icon"></span>
-            </a>
          </div>
       </div>
       <hr>
@@ -407,6 +415,17 @@
    <script src="node_modules/jquery/dist/jquery.min.js"></script>
    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+   <script>
+      $(document).ready(function() {
+         $("#mycarousel").carousel({interval: 2000, pause: false});
+         $("#carousel-pause").click(function() {
+            $("#mycarousel").carousel("pause");
+         });
+         $("#carousel-play").click(function() {
+            $("#mycarousel").carousel("cycle");
+         });
+      });
+   </script>
 </body>
 
 </html>
